@@ -10,7 +10,7 @@ export class Books extends Component {
 
   componentDidMount() {
     axios
-      .get("http://www.alexander-yarnell.com:7999/wp-json/wp/v2/books")
+      .get("http://alexander-yarnell.com:7999/wp-json/wp/v2/books")
       .then((res) =>
         this.setState({
           books: res.data,
