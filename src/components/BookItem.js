@@ -15,10 +15,10 @@ export class BookItem extends Component {
   componentDidMount() {
     const { featured_media, author } = this.props.book;
     const getImageUrl = axios.get( 
-      `http://45.79.38.174:8000/wp-json/wp/v2/media/${featured_media}`
+      `http://www.alexander-yarnell.com:8000/wp-json/wp/v2/media/${featured_media}`
     );
     const getAuthor = axios.get( 
-      `http://45.79.38.174:8000/wp-json/wp/v2/users/${author}`
+      `http://www.alexander-yarnell.com:8000/wp-json/wp/v2/users/${author}`
     );
 
     Promise.all([getImageUrl, getAuthor]).then((res) => {
