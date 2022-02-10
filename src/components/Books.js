@@ -10,7 +10,7 @@ export class Books extends Component {
 
   componentDidMount() {
     axios
-      .get("http://45.79.38.174:8000/wp-json/wp/v2/books")
+      .get("http://localhost:8000/wp-json/wp/v2/books")
       .then((res) =>
         this.setState({
           books: res.data,
@@ -29,7 +29,7 @@ export class Books extends Component {
           {books.map((book) => {
             return (
               <div>
-                <BookItem key={book.id} book={book}/>
+                <BookItem key={book.id} book={book} />
               </div>
             );
           })}
